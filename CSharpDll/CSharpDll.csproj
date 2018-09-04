@@ -49,7 +49,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(TargetDir)*.*" "$(SolutionDir)UpdateTestApp"
-copy /Y "$(TargetDir)*.*" "$(SolutionDir)x64\$(ConfigurationName)
+mkdir "$(SolutionDir)$(ConfigurationName)"
+copy /Y "$(TargetDir)*.*" "$(SolutionDir)$(ConfigurationName)"
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
