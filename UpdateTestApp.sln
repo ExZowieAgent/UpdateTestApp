@@ -10,6 +10,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateTestApp", "UpdateTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpDll", "CSharpDll\CSharpDll.csproj", "{725E262C-030E-405C-B1CB-47F161472E8C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F090DD6-8BB6-4202-A234-B9604306AD8C}"
+	ProjectSection(SolutionItems) = preProject
+		install.go = install.go
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupProject1", "SetupProject1\SetupProject1.wixproj", "{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +59,16 @@ Global
 		{725E262C-030E-405C-B1CB-47F161472E8C}.Release|x64.Build.0 = Release|Any CPU
 		{725E262C-030E-405C-B1CB-47F161472E8C}.Release|x86.ActiveCfg = Release|Any CPU
 		{725E262C-030E-405C-B1CB-47F161472E8C}.Release|x86.Build.0 = Release|Any CPU
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Debug|ARM.ActiveCfg = Debug|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Debug|x64.ActiveCfg = Debug|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Debug|x86.ActiveCfg = Debug|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Debug|x86.Build.0 = Debug|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Release|Any CPU.ActiveCfg = Release|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Release|ARM.ActiveCfg = Release|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Release|x64.ActiveCfg = Release|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Release|x86.ActiveCfg = Release|x86
+		{F494FED4-02E1-47EF-9CB3-E02BD70D0A94}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

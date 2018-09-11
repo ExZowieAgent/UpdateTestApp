@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Test App" Language="1033" Version="1.0.0.0" Manufacturer="Usaa" UpgradeCode="417d351c-daca-4fea-85cc-dada9db30055">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate />
+    <Feature Id="ProductFeature" Title="Test App" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="CSharpDll.Binaries" />
+      <ComponentGroupRef Id="UpdateTestApp.Binaries" />
+      <ComponentGroupRef Id="RegistryGroup" />
+    </Feature>
+  </Product>
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Test App">
+          <Directory Id="CSharpDll.Binaries" />
+          <Directory Id="UpdateTestApp.Binaries" />
+        </Directory>
+      </Directory>
+    </Directory>
+    <ComponentGroup Id="RegistryGroup">
+      <Component Id="_F060BD92_D5C3_42B8_AB57_F7E3D4A630A6" Guid="CD1130F2-F3C4-4BDA-A451-306FA8717CD8" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKLM" Key="SOFTWARE" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_53E730D5_F023_4B8F_A731_6897712E2991" Guid="0A08D028-4A74-499A-A99C-45B11BE62E90" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Usaa" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_6BF2AEC9_A2F2_42C0_A4E4_CD7A5F4FD64E" Guid="3D100AB4-A800-4B0E-8147-057F27FF1240" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Usaa\Update" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_009C701C_E78E_4BB0_9D03_32A2D982A080" Guid="255799A1-18BE-44AA-8042-CAD242929E2E" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Usaa\Update\Clients" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_0DFF0CC0_6DE4_4930_93D8_618FF3F02724" Guid="EBD6034E-3350-423C-AD5B-398C852B183C" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Usaa\Update\Clients\{e7d762e9-32de-492f-ab3d-7dc833d82546}" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_F30A8307_F688_408E_9FF9_829B272370F9" Guid="0C4CAFEC-10F3-4DBA-B254-113058D9D370" Transitive="no" Directory="TARGETDIR">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Usaa\Update\Clients\{e7d762e9-32de-492f-ab3d-7dc833d82546}" Type="string" Name="pv" Value="1.0.0.0" />
+      </Component>
+      <Component Id="_0D3A49E6_1070_4025_A539_B43A06C7B265" Guid="E3668F21-4027-4735-B199-4A749282E8E1" Transitive="no" Directory="TARGETDIR">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Usaa\Update\Clients\{e7d762e9-32de-492f-ab3d-7dc833d82546}" Type="string" Name="name" Value="Test App" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <!-- <Component Id="ProductComponent"> -->
+      <!-- TODO: Insert files, registry keys, and other resources here. -->
+      <!-- </Component> -->
+      <Component Id="comp_E7B7D90C_35F5_4C5D_B51B_CBE6855577A6" Guid="2AFF9DD0-5444-45F4-B98B-761E0552AB1A" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_2F4CC1F1_40E5_49AC_B0E5_D23E66E2D328" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="mscorlib.dll" Source="..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
